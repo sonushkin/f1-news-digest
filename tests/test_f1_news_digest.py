@@ -1,5 +1,6 @@
 """Small standard-library tests for F1 News Digest."""
 
+import argparse
 import sys
 import tempfile
 import unittest
@@ -39,6 +40,25 @@ class DigestTests(unittest.TestCase):
             digest.save_history(history_path, {"test-item-001"})
             self.assertEqual(
                 digest.load_history(history_path), {"test-item-001"}
+            )
+
+    def test_limit_validation(self) -> None:
+        self.assertEqual(digest.positive_integer("3"), 3)
+        with self.assertRaises(argparse.ArgumentTypeError):
+            digest.positive_integer("0")
+        with self.assertRaises(argparse.ArgumentTypeError):
+            digest.positive_integer("abc")
+
+    def test_malformed_history_is_not_overwritten(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            history_path = Path(directory) / "history.json"
+            invalid_content = "not valid json\n"
+            history_path.write_text(invalid_content, encoding="utf-8")
+
+            with self.assertRaises(digest.HistoryError):
+                digest.load_history(history_path)
+            self.assertEqual(
+                history_path.read_text(encoding="utf-8"), invalid_content
             )
 
 
