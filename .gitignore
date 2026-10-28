@@ -1,0 +1,16 @@
+# Python-generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local environments and editor settings
+.venv/
+venv/
+.DS_Store
+.idea/
+.vscode/
+
+# Runtime data fetched or created by the application
+data/news_history.json
+data/*.tmp
+
