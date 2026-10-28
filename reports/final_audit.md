@@ -53,8 +53,17 @@ The tracked-file review confirmed the presence of:
 Stage 6 prompt, AI output, checklist, and this audit report are prepared for a
 final genuine audit commit.
 
-## Local conclusion
+## Publication verification
 
-The local project passes the pre-publication audit. GitHub repository creation,
-push, public visibility, and URL verification remain pending external steps.
+The learner created the public repository
+<https://github.com/sonushkin/f1-news-digest> and pushed local branch `main`.
+Git reported that the new remote branch was created and configured as the
+upstream for local `main`. The learner opened the direct repository URL without
+authentication and confirmed that the project files and README were visible.
+
+## Conclusion
+
+The project passes the local audit and the required public GitHub publication
+checkpoint. This final documentation update must be pushed after it is
+committed so the remote checklist matches the verified state.
 

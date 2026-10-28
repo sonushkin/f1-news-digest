@@ -9,8 +9,8 @@
 - [x] README with exact run instructions
 - [x] Meaningful Git history
 - [x] Final local audit passed
-- [ ] Public GitHub repository created
-- [ ] Branch `main` pushed and public URL verified
+- [x] Public GitHub repository created
+- [x] Branch `main` pushed and public URL verified
 
 ## Repository contents to verify
 
@@ -33,6 +33,6 @@
 
 ## Submission
 
-- Public repository URL: **pending learner approval and publication**
+- Public repository URL: <https://github.com/sonushkin/f1-news-digest>
 - Submit the verified public GitHub link required by the assignment.
 
